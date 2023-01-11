@@ -2,6 +2,7 @@
 import Admin from './pages/Admin'
 import Auth from './pages/Auth'
 import Client from './pages/Client'
+import LoginPage from './pages/Auth/Login'
 // import ResetPassword from '@app/pages/Auth/ResetPassword'
 import { Routes, Route } from 'react-router-dom'
 // import NotExist from './components/NotFound/NotExist'
@@ -14,8 +15,8 @@ const App = () => (
       <Route element={<Admin />} path="admin/*" />
       <Route element={<Client />} path="client/*" />
       <Route element={<Auth />} path="auth/*" />
+      <Route element={<LoginPage />} path="/" />
       {/* <Route element={<ResetPassword />} path="reset-password/" />
-      <Route element={<NotFound />} path="*" />
       <Route element={<NotExist />} path="/404" /> */}
     </Routes>
     <ToastContainer

@@ -45,7 +45,14 @@ const loginReducer = (state = INITIAL_STATE, action) => {
         error: action.payload,
         loading: false,
       }
-
+      case GET_USER_BY_TOKEN: {
+        return {
+          ...state,
+          loading: true,
+          error: null,
+          response: null,
+        }
+      }
     case GET_USER_BY_TOKEN_SUCCESS:
       return {
         ...state,
